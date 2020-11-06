@@ -1,0 +1,7 @@
+<p>LIST OF CUSTOMERS</p>
+
+<ul *ngFor="let customer of customers">
+  <li routerLink="{{customer.id}}">{{customer.name}}</li>
+</ul>
+
+<router-outlet ></router-outlet>
