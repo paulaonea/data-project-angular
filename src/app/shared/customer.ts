@@ -2,5 +2,5 @@ export interface Customer {
   id: number;
   name: string;
   age: number;
-  telephone: string;
+  tel: string;
 }
