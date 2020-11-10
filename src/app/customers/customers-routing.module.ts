@@ -5,7 +5,9 @@ import {CustomersListComponent} from './customers-list/customers-list.component'
 
 const routes: Routes = [
   {path: '', component: CustomersListComponent},
-  {path: ':id', component: CustomersDetailsComponent}
+  {path: ':id', component: CustomersDetailsComponent, children: [
+      {path: 'back', redirectTo: '/customers'},
+    ]}
 ];
 
 @NgModule({

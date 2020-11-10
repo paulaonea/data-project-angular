@@ -37,13 +37,11 @@ export class CustomersDetailsComponent implements AfterViewInit {
   displayedColumns: string[] = ['id', 'date', 'totalValue'];
   customer: CustomerDetails;
   orders: any;
-  clicked: boolean;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
   constructor() {
-    this.clicked = false;
     this.customer = {
       details: {id: 1, name: 'Joe', age: 21, tel: '0123456'},
       orders: {
