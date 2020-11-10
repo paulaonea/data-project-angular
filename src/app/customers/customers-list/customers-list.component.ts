@@ -15,7 +15,6 @@ export class CustomersListComponent implements AfterViewInit {
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
-  private picked: any = null;
 
   constructor() {
     const customers: Customer[] = [
