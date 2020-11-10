@@ -1,0 +1,21 @@
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+td, th {
+  width: 25%;
+}
+
+::ng-deep .boldArrow .mat-sort-header-arrow.ng-trigger.ng-trigger-arrowPosition {
+  opacity: 1 !important;
+}
+
+.mat-row:hover {
+  background-color: antiquewhite;
+  cursor: pointer;
+}

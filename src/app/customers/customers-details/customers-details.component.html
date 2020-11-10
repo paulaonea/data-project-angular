@@ -1,0 +1,32 @@
+<div class="mat-app-background basic-container">
+
+  <mat-card>
+    <mat-card-title>
+      <h2>Orders History</h2>
+    </mat-card-title>
+
+    <mat-card-content>
+      <p>Custome: {{customer.details.name}}</p>
+      <p>Tel: {{customer.details.tel}}</p>
+      <p>Address: n/a</p>
+      <br>
+
+      <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+        <ng-container *ngFor="let column of displayedColumns" matColumnDef="{{column}}">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header > {{column.toLocaleUpperCase()}} </th>
+          <td mat-cell *matCellDef="let element" routerLink="orders/{{element.id}}"> {{element[column]}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+      </table>
+
+      <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+    </mat-card-content>
+  </mat-card>
+
+
+
+</div>
