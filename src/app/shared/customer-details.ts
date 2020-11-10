@@ -1,10 +1,10 @@
 import {Customer} from './customer';
-import {Order} from './order';
+import {OrderBrief} from './order-brief';
 
 export class CustomerDetails {
   details: Customer;
   orders: {
     totalNumberOfOrders: number;
-    ordersDetails: Order[];
+    ordersDetails: OrderBrief[];
   };
 }

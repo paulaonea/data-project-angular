@@ -4,6 +4,7 @@ import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import {OrderItem} from '../../shared/order-item';
 import {OrderDetails} from '../../shared/order-details';
+import {OrderStatus} from '../../shared/order-status';
 
 @Component({
   selector: 'app-order-details',
@@ -24,6 +25,7 @@ export class OrderDetailsComponent implements AfterViewInit{
       customerName: 'Joe',
       date: '2016',
       totalInvoiced: 48.8,
+      status: OrderStatus.Delivered,
       orderItems: [
         { productId: 123, name: 'ABC', price: 14.2, quantity: 3},
         { productId: 123, name: 'AB', price: 3.2, quantity: 2},

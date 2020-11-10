@@ -7,9 +7,10 @@
 
     <mat-card-content>
       <p>Order Number: {{order.id}}</p>
-      <p>Customer Id: {{order.customerId}}</p>
-      <p>Customer Name: {{order.customerName}}</p>
+      <p>Custome Id: {{order.customerId}}</p>
+      <p>Custome Name: {{order.customerName}}</p>
       <p>Order Date: {{order.date}}</p>
+      <p>Order Status: {{order.status}}</p>
       <p><strong><i>Total invoice amount: {{order.totalInvoiced}}</i></strong></p>
       <br>
 
@@ -25,9 +26,6 @@
       </table>
 
     </mat-card-content>
-    <button mat-raised-button
-            routerLink="back">
-      Back to Customers</button>
   </mat-card>
 
 
