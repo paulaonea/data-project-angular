@@ -7,6 +7,7 @@ const routes: Routes = [
   {path: '', component: CustomersListComponent},
   {path: ':id', component: CustomersDetailsComponent, children: [
       {path: 'back', redirectTo: '/customers'},
+      {path: 'orders/:id', redirectTo: '/orders/:id'}
     ]}
 ];
 

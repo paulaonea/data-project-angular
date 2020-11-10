@@ -2,13 +2,15 @@
 
   <mat-card>
     <mat-card-title>
-      <h2>Orders History</h2>
+      <h2>Order Details</h2>
     </mat-card-title>
 
     <mat-card-content>
-      <p>Customer: {{customer.details.name}}</p>
-      <p>Tel: {{customer.details.tel}}</p>
-      <p>Address: n/a</p>
+      <p>Order Number: {{order.id}}</p>
+      <p>Customer Id: {{order.customerId}}</p>
+      <p>Customer Name: {{order.customerName}}</p>
+      <p>Order Date: {{order.date}}</p>
+      <p><strong><i>Total invoice amount: {{order.totalInvoiced}}</i></strong></p>
       <br>
 
       <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
@@ -20,10 +22,8 @@
 
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-
       </table>
 
-      <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
     </mat-card-content>
     <button mat-raised-button
             routerLink="back">
@@ -33,3 +33,4 @@
 
 
 </div>
+
