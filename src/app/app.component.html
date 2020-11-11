@@ -9,10 +9,14 @@
   <button mat-button [matMenuTriggerFor]="customers">Customers</button>
   <mat-menu #customers="matMenu" yPosition="below">
     <button mat-menu-item routerLink="customers/list">Customers List</button>
+    <button mat-menu-item routerLink="customers/new">Add Customer</button>
+    <button mat-menu-item routerLink="customers/remove">Remove Customer</button>
   </mat-menu>
   <button mat-button [matMenuTriggerFor]="orders">Orders</button>
   <mat-menu #orders="matMenu" yPosition="below">
     <button mat-menu-item routerLink="orders/list">Orders List</button>
+    <button mat-menu-item routerLink="orders/add">Add Order</button>
+    <button mat-menu-item routerLink="orders/update">Update Order</button>
   </mat-menu>
 
   <button mat-button >Sign Up</button>
