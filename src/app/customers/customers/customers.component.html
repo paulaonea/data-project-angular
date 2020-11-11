@@ -1,0 +1,14 @@
+<mat-sidenav-container class="sidebar">
+  <mat-sidenav mode="side" role="navigation" opened>
+    <mat-nav-list>
+      <mat-list-item>MENU</mat-list-item>
+      <a mat-list-item routerLink="list">All Customers</a>
+      <a mat-list-item routerLink="new">Add Customer</a>
+      <a mat-list-item routerLink="remove">Remove Customers</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content class="content" role="main">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+

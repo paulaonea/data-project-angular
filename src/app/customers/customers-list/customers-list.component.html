@@ -4,12 +4,13 @@
   <mat-card-title>
     <h2>CUSTOMERS</h2>
   </mat-card-title>
+  <br>
   <mat-card-content>
   <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
 
     <ng-container *ngFor="let column of displayedColumns" matColumnDef="{{column}}">
       <th mat-header-cell *matHeaderCellDef mat-sort-header > {{column.toLocaleUpperCase()}} </th>
-      <td mat-cell *matCellDef="let element" routerLink="{{element.id}}"> {{element[column]}} </td>
+      <td mat-cell *matCellDef="let element" routerLink="/customers/{{element.id}}"> {{element[column]}} </td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

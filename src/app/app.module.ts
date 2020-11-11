@@ -13,6 +13,11 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {MatNativeDateModule} from '@angular/material/core';
 import {MatButtonModule} from '@angular/material/button';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatCardModule} from '@angular/material/card';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -31,6 +36,11 @@ import {MatButtonModule} from '@angular/material/button';
     MatNativeDateModule,
     ReactiveFormsModule,
     MatButtonModule,
+    MatMenuModule,
+    MatCardModule,
+    MatSidenavModule,
+    MatListModule,
+    MatToolbarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
