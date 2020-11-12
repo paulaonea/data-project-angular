@@ -2,9 +2,71 @@
 
   <mat-card>
     <mat-card-title>
-      <h2>New Customer</h2>
+      <h2>New Customer Registration Form</h2>
     </mat-card-title>
+    <br>
+    <mat-card-content>
+      <mat-card class="new-customer">
+      <form [formGroup]="registerForm" (submit)="submitForm()">
+        <p>
+          <mat-form-field appearance="legacy" class="customer-details">
+            <mat-label>Full Name</mat-label>
+            <input matInput type="text" formControlName="name" placeholder="enter your name">
+            <mat-error *ngIf="registerForm.get('name').hasError('required')">
+              Full Name is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field class="customer-details" appearance="legacy" >
+            <mat-label>Email</mat-label>
+              <input matInput type="email" formControlName="email" >
+                <mat-error *ngIf="registerForm.get('email').hasError('email')
+                  &&!registerForm.get('email').hasError('required')">
+                Please enter a valid email address
+                </mat-error>
+                <mat-error *ngIf="registerForm.get('email').hasError('required')">
+                  Email is <strong>required</strong>
+                </mat-error>
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field class="customer-details" appearance="legacy">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" formControlName="password" >
+            <mat-error *ngIf="registerForm.get('password').hasError('required')">
+              Password is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field class="customer-details" appearance="legacy">
+            <mat-label>Telephone</mat-label>
+            <input matInput type="phone" formControlName="phone" >
+            <mat-error *ngIf="registerForm.get('phone').hasError('required')">
+              Telephone is <strong>required</strong>
+            </mat-error>
+            <mat-error *ngIf="registerForm.get('phone').hasError('pattern')">
+              Please enter a valid phone number digits only
+            </mat-error>
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field class="customer-details" appearance="legacy">
+            <mat-label>Age</mat-label>
+            <input matInput type="age" formControlName="age" >
+            <mat-error *ngIf="registerForm.get('age').hasError('required')">
+              Age is required
+            </mat-error>
+            <mat-error *ngIf="!registerForm.get('age').hasError('required')">
+              Please enter a number between 15 and 100
+            </mat-error>
+          </mat-form-field>
+        </p>
+        <button [disabled]="!registerForm.valid" mat-raised-button color="basic" type="submit">Submit</button>
+        </form>
+      </mat-card>
+    </mat-card-content>
   </mat-card>
-
 
 </div>

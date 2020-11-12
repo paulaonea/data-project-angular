@@ -14,9 +14,18 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import { NewCustomerComponent } from './new-customer/new-customer.component';
 import { RemoveCustomerComponent } from './remove-customer/remove-customer.component';
+import {ReactiveFormsModule} from '@angular/forms';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
-  declarations: [CustomersListComponent, CustomersDetailsComponent, CustomersRoutingModule.components, CustomersComponent, NewCustomerComponent, RemoveCustomerComponent],
+  declarations: [
+    CustomersListComponent,
+    CustomersDetailsComponent,
+    CustomersRoutingModule.components,
+    CustomersComponent,
+    NewCustomerComponent,
+    RemoveCustomerComponent
+  ],
   imports: [
     CommonModule,
     CustomersRoutingModule,
@@ -28,6 +37,8 @@ import { RemoveCustomerComponent } from './remove-customer/remove-customer.compo
     MatButtonModule,
     MatSidenavModule,
     MatListModule,
+    ReactiveFormsModule,
+    MatInputModule,
   ]
 })
 
