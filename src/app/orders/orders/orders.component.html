@@ -1,0 +1,15 @@
+<mat-sidenav-container class="sidebar">
+  <mat-sidenav mode="side" role="navigation" opened>
+    <mat-nav-list>
+      <mat-list-item>MENU</mat-list-item>
+      <a mat-list-item routerLink="list">All Orders</a>
+      <a mat-list-item routerLink="add">Add Order</a>
+      <a mat-list-item routerLink="update">Update Order</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content class="content" role="main">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+

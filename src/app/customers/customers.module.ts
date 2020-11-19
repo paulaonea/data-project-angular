@@ -9,9 +9,23 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSortModule} from '@angular/material/sort';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
+import { CustomersComponent } from './customers/customers.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+import { NewCustomerComponent } from './new-customer/new-customer.component';
+import { RemoveCustomerComponent } from './remove-customer/remove-customer.component';
+import {ReactiveFormsModule} from '@angular/forms';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
-  declarations: [CustomersListComponent, CustomersDetailsComponent, CustomersRoutingModule.components],
+  declarations: [
+    CustomersListComponent,
+    CustomersDetailsComponent,
+    CustomersRoutingModule.components,
+    CustomersComponent,
+    NewCustomerComponent,
+    RemoveCustomerComponent
+  ],
   imports: [
     CommonModule,
     CustomersRoutingModule,
@@ -21,6 +35,10 @@ import {MatButtonModule} from '@angular/material/button';
     MatSortModule,
     MatCardModule,
     MatButtonModule,
+    MatSidenavModule,
+    MatListModule,
+    ReactiveFormsModule,
+    MatInputModule,
   ]
 })
 
