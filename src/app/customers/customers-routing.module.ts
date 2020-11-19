@@ -12,6 +12,7 @@ const routes: Routes = [
       {path: 'new', component: NewCustomerComponent},
       {path: 'remove', component: RemoveCustomerComponent},
       {path: ':id', component: CustomersDetailsComponent},
+      {path: '/orders/:id', redirectTo: '/orders/:id'},
       ]}
   ];
 
